@@ -39,7 +39,7 @@
         }
 
         .header{
-            border: green 2px solid;
+            /* border: green 2px solid; */
             position: fixed;
             top: 0;
             left: 0;
@@ -62,8 +62,8 @@
             font-weight: 600;
             cursor: default;
         }
-        /* .navbar{
-            position: absolute;
+        .navbar{
+            /* position: absolute;s */
             top: 100%;
             right: 0;
             width: 100%;
@@ -71,15 +71,17 @@
             background: var(--bg-color);
             border-top: .1rem solid rgba(0, 0, 0, .2);
             box-shadow: .1rem solid rgba(0, 0, 0, .2);
-            display: none;
-        } */
+            /* display: none; */
+        }
         .navbar.active{
             /* border: 2px red solid; */
             /* text-align: center; */
-            display: block;
+                                        display: block;
             /* margin-right: 0px; */
         }
         .navbar a{
+                                        /* border: 2px solid red; */
+                                        /* display: none; */
             font-size: 1.7rem;
             color: var(--text-color);
             /* font-weight: 600; */
@@ -380,12 +382,12 @@
             box-shadow: 0 0 1rem var(--main-color) ; 
         }
 
-        @media (max-width: 1200px) {
+@media (max-width: 1200px) {
             html {
                 font-size: 55%;
             }
-        }
-        @media (max-width: 991px) {
+}
+@media (max-width: 991px) {
             .header {
                 padding: 2rem 3%;
             }
@@ -404,12 +406,13 @@
             .footer {
                 padding: 2rem 3%;
             }
-        }
-        @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
             #menu-icon {
                 display: block;
             }
             .navbar {
+            display: none;
             width: 100%;
             position: absolute;
             top: 100%;
@@ -453,34 +456,39 @@
         .portfolio-container {
             grid-template-columns: repeat(2,1fr);
         }
+        .portfolio-box{
+            max-height: 40vh;
+
         }
-        @media (max-width: 617px) {
+}
+@media (max-width: 617px) {
         .portfolio-container{
             grid-template-columns: 1fr;
         }
-        }
-        @media (max-width: 450px) {
+}
+@media (max-width: 470px) {
         html{
             font-size: 50%;
         }
         .contact form .input-box input{
-            width: 100%;        }
+            width: 100%;        
         }
-        @media (max-width: 365px) {
+        .footer p{
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .footer{
+            flex-direction: column-reverse;
+        }
+}
+@media (max-width: 365px) {
         .home-img img{
              width: 90vw;
         }
         .about-img img{
              width: 90vw;
         }
-        .footer{
-            flex-direction: column-reverse;
-        }
-        .footer p{
-            text-align: center;
-            margin-top: 2rem;
-        }
-        }
+}
     </style>
 </head>
 <body>
@@ -670,6 +678,7 @@
         distance: '80px',
         duration: 2000,
         delay: 200
+
         });
         ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
         ScrollReveal().reveal('.home img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
