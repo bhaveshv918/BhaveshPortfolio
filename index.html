@@ -428,7 +428,8 @@
             margin: 3rem 0;
         }
         .home{
-            flex-direction: column;
+            flex-direction: column-reverse;
+            /* border: 2px red solid; */
         }
         .home-content h3{
             font-size: 2.6rem;
@@ -441,7 +442,17 @@
             margin-top: 4rem;
         }
         .about{
+            text-align: center;
+            justify-content: center;
             flex-direction: column-reverse;
+        }
+        .about .heading{
+            text-align: center;
+            justify-content: center;
+        }
+        .home-content{
+            text-align: center;
+            justify-content: center;
         }
         .about img {
             width: 70vw;
@@ -458,7 +469,6 @@
         }
         .portfolio-box{
             max-height: 40vh;
-
         }
 }
 @media (max-width: 617px) {
