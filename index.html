@@ -177,11 +177,9 @@
             border-radius: 2rem;
         }
         .home img{
-            /* border: 2px red solid; */
             margin-top: 2rem;
-            width: 35rem;
+            max-width: 35rem;
             animation: floatImage 4s ease-in-out infinite;
-            /* margin-top: 4rem; */
         }
         @keyframes floatImage {
             0%{
@@ -224,15 +222,15 @@
         /* .services-container, .services-box{ */
             flex: 1 1 30rem;
             background: var(--second-bg-color);
-            padding: 3rem 2rem 5rem;
+            padding: 3rem 2rem;
             border-radius: 2rem;
             text-align: center;
             border: .2rem solid var(--bg-color);
             transition: .5s ease;
         }
         .services-container, .services-box:hover{
-                border-color: var(--main-color);
-                transform: scale(1.02);
+            border-color: var(--main-color);
+            transform: scale(1.02);
         }
         .services-box i {
             font-size: 7rem;
@@ -240,42 +238,40 @@
         }
         .services-box h3 {
             font-size: 2.6rem;
-            /* color: var(--main-color); */
         }
         .services-box p{
             gap: 1.6rem;
             margin: 1rem 0 3rem;
         }
-        .portfolio{
+        .project{
             background: var(--second-bg-color);
         }
-        .portfolio h2{
-                margin-bottom: 3rem;
-                /* border: 2px solid red; */
+        .project h2{
+            margin-bottom: 3rem;
 
         }
-        .portfolio-container{
+        .project-container{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             align-items: center;
             gap: 2.5rem;
         }
-        .portfolio-container .portfolio-box{
+        .project-container .project-box{
             position: relative;
             border-radius: 2rem;
             box-sizing: 0 0 1rem var(--bg-color);
             overflow: hidden;
             display: flex;
         }
-        .portfolio-box img{
+        .project-box img{
             width: 100%;
-            height: 43vh;
+            height: 45vh;
             transition: .5s ease;
         }
-        .portfolio-box img:hover{
+        .project-box img:hover{
             transform: scale(1.1);
         }
-        .portfolio-box .portfolio-layer{
+        .project-box .project-layer{
             position: absolute;
             bottom: 0;
             left: 0;
@@ -291,18 +287,18 @@
             transform: translateY(100%);
             transition: .5s ease;
         }
-        .portfolio-box:hover .portfolio-layer{
+        .project-box:hover .project-layer{
             transform: translateY(0);
         }
-        .portfolio-layer h4{
+        .project-layer h4{
             font-size: 3rem ;
 
         }
-        .portfolio-layer p{
+        .project-layer p{
             font-size: 1.6rem;
             margin: .3rem 0 1rem;
         }
-        .portfolio-layer a{
+        .project-layer a{
             display: inline-flex;
             justify-content: center;
             align-items: center;
@@ -311,7 +307,7 @@
             background: var(--text-color);
             border-radius: 50%;
         }
-        .portfolio-layer a i {
+        .project-layer a i {
             font-size: 2rem;
             color: var(--second-bg-color);
         }
@@ -372,7 +368,6 @@
             align-items: center;
             padding: .8rem;
             border-radius: .8rem;
-            /* font-size: 1.6rem; */
             background: var(--main-color);
             transition: .5s ease;
         }
@@ -385,42 +380,42 @@
         }
 
 @media (max-width: 1200px) {
-            html {
-                font-size: 55%;
-            }
+        html {
+            font-size: 55%;
+        }
 }
 @media (max-width: 991px) {
-            .header {
-/*                 padding: 2rem 3%; */
-            }
-            section {
-                padding: 10rem 3% 2rem;
-            }
-            .services{
-                padding-bottom: 7rem;
-            }
-            .portfolio{
-                padding-bottom: 7rem;
-            }
-            .contact{
-                min-height: auto;
-            }
-            .footer {
-                padding: 2rem 3%;
-            }
-            .navbar {
-                padding: 0;
-            }
-}
-@media (max-width: 768px) {
-            html,body{
+        html,body{
             width:100%;
             overflow-x:hidden;
+        }
+        .header {
+            padding: 2rem 3%;
             }
-            #menu-icon {
-                display: block;
+        section {
+            padding: 10rem 3% 2rem;
+        }
+        .services{
+            padding-bottom: 7rem;
+        }
+        .project{
+            padding-bottom: 7rem;
+        }
+        .contact{
+            min-height: auto;
+        }
+        .footer {
+            padding: 2rem 3%;
+        }
+        .navbar {
+            padding: 0;
+        }
+}
+@media (max-width: 768px) {
+        #menu-icon {
+            display: block;
             }
-            .navbar {
+        .navbar {
             display: none;
             width: 100%;
             position: absolute;
@@ -438,16 +433,12 @@
             text-align: center;
         }
         .navbar a{
-            /* border: 2px red solid; */
             display: block;
             font-size: 2rem;
             margin: 3rem 0;
-            /* text-align: center; */
-            /* justify-content: center; */
         }
         .home{
             flex-direction: column-reverse;
-            /* border: 2px red solid; */
         }
         .home-content h3{
             font-size: 2.6rem;
@@ -479,19 +470,18 @@
         .servicesh2{
             margin-bottom: 3rem;
         }
-        .portfolio h2{
+        .project h2{
             margin-bottom: 3rem;
         }
-        .portfolio-container {
-            /* grid-template-columns: repeat(2,1fr); */
+        .project-container {
             grid-template-columns: 1fr;
         }
-        .portfolio-box{
+        .project-box{
             max-height: 40vh;
         }
 }
 @media (max-width: 617px) {
-        .portfolio-container{
+        .project-container{
             grid-template-columns: 1fr;
         }
 }
@@ -510,14 +500,9 @@
             flex-direction: column-reverse;
         }
 }
-
-body{
-            margin: 0;}
-
     </style>
 </head>
 <body>
-    
     <header class="header">
         <a href="#" class="logo">Portfolio</a>
         <i class="bx bx-menu" id="menu-icon"></i>
@@ -525,12 +510,12 @@ body{
             <a href="#home" class="active" >Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#project">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
-
-    <!-- home section design -->
+    
+<!--     home section design -->
     <section class="home" id="home">
         <div class="home-content">
             <h3>Hey, It's Me </h3> 
@@ -548,10 +533,10 @@ body{
             </div>
         </div>
         <div>
-        <img class="img" src="main.png" alt="main">
+        <img  class="img" src="main.png" alt="main">
     </div>
     </section>
-
+    
     <!-- About section design  -->
     <section class="about" id="about">
         <div class="about-img">
@@ -561,7 +546,6 @@ body{
             <h2 class="heading">About <span>Me</span></h2>
             <h3>Frontend React Developer!</h3>
             <p>A Junior Front-End Developer located in Noida, India. Armed with a solid foundation in HTML, CSS, and JavaScript, I specialize in creating responsive and user-friendly websites. With a keen eye for detail and a thirst for innovation, I strive to bring dynamic and captivating interfaces to life using the latest development tools. I value collaborative teamwork and am dedicated to contributing to remarkable web projects.</p>
-<!--             <a href="#" class="btn">Read more</a> -->
         </div>
     </section>
 
@@ -574,50 +558,45 @@ body{
                 <i class='bx bx-code-alt' ></i>
                 <h3>Web Development</h3>
                 <p>Building functional and visually appealing websites that provide seamless user experiences through skillful coding and innovative design.</p>
-<!--                 <a href="#" class="btn">Read More</a> -->
             </div>
-
 
             <div class="services-box">
                 <i class='bx bxs-paint' ></i>
                 <h3>Graphic Design</h3>
                 <p>Crafting visually striking designs that breathe life into ideas and communicate messages with creativity.</p>
-<!--                 <a href="#" class="btn">Read More</a> -->
             </div>
-
 
             <div class="services-box">
                 <i class='bx bx-bar-chart-alt' ></i>
                 <h3>Digital Marketing</h3>
                 <p>Harnessing the power of online strategies to boost brand visibility and engage audiences effectively.</p>
-<!--                 <a href="#" class="btn">Read More</a> -->
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section Design  -->
-    <section class="portfolio" id="portfolio">
+    <!-- project Section Design  -->
+    <section class="project" id="project">
         <h2 class="heading">Latest <span>Projects</span></h2>
-        <div class="portfolio-container">
-            <div class="portfolio-box">
+        <div class="project-container">
+            <div class="project-box">
                 <img src="1.png" alt="">
-                <div class="portfolio-layer">
+                <div class="project-layer">
                     <h4>Web 1</h4>
                     <p>Step into our virtual realm where online connections come to life, transforming e-commerce and social media interactions into engaging and immersive experiences.</p>
                     <a href="#"><i class='bx bx-link-external' ></i></a>
                 </div>
             </div>
-            <div class="portfolio-box">
-                <img src="2.png" alt="">
-                <div class="portfolio-layer">
+            <div class="project-box">
+                <img style="" src="2.png" alt="">
+                <div class="project-layer">
                     <h4>Web 2</h4>
                     <p>Dive into a symphony of sounds in our music bank, where melodies from every genre find a home, creating an auditory experience that resonates with your soul.</p>
                     <a href="#"><i class='bx bx-link-external' ></i></a>
                 </div>
             </div>
-            <div class="portfolio-box">
+            <div class="project-box">
                 <img src="3.png" alt="">
-                <div class="portfolio-layer">
+                <div class="project-layer">
                     <h4>Web 3</h4>
                     <p>Embark on a digital journey with us, where seamless logistics and smart tracking redefine the way you experience package delivery and travel.</p>
                     <a href="#"><i class='bx bx-link-external' ></i></a>
@@ -625,8 +604,6 @@ body{
             </div>
         </div>
     </section>
-
-    
     
     <!-- Contact Section design  -->
     <section class="contact" id="contact">
@@ -656,6 +633,7 @@ body{
     </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
 </body>
+    
 <script>
     // <!-- Toggle icon bar  -->
     let menuIcon = document.querySelector('#menu-icon');
@@ -664,7 +642,6 @@ body{
     menuIcon.onclick = () => {
         menuIcon.classList.toggle('bx-x');
         navbar.classList.toggle('active');
-    
     };
 
     // Scroll sections active link 
@@ -687,30 +664,22 @@ body{
         });
         // Sticky Navbar
         let header = document.querySelector('header');
-        
         header.classList.toggle('sticky', window.scrollY > 100);
-
 
         // remove toggle icon and navbar when clicked navbar link (scroll)
         menuIcon.classList.remove('bx-x');
         navbar.classList.remove('active');
 };
-
-
         // scroll reveal 
         ScrollReveal({
-        // reset: true,
         distance: '80px',
         duration: 2000,
         delay: 200
-
         });
+    
         ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-        ScrollReveal().reveal('.home img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
+        ScrollReveal().reveal('.home img, .services-container, .project-box, .contact form', { origin: 'bottom' });
         ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
         ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
-
-        
-
 </script>
 </html>
